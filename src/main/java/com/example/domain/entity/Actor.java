@@ -1,15 +1,19 @@
 package com.example.domain.entity;
 
-        import lombok.AllArgsConstructor;
-        import lombok.Getter;
-        import lombok.NoArgsConstructor;
-        import lombok.Setter;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
-        import javax.persistence.*;
-        import java.time.LocalDateTime;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
-@Table(name="actor")
+@Table(name = "actor")
 @Getter
 @NoArgsConstructor
 public class Actor {
@@ -17,10 +21,10 @@ public class Actor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name= "name")
+    @Column(name = "name")
     private String name;
 
-    @Column(name = "movie_id")
-    private Long movieId;
-
+    @ManyToOne
+    @JoinColumn(name = "movie_id")
+    private Movie movie;
 }

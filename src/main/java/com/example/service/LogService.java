@@ -13,8 +13,7 @@ public class LogService {
     private final LogRepository logRepository;
 
     @Transactional(propagation = Propagation.REQUIRES_NEW)
-    public void saveLog(){
+    public void saveLog() {
         logRepository.save(new Log());
-
     }
 }
