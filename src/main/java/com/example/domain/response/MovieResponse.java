@@ -13,11 +13,14 @@ public class MovieResponse {
 
     private final int productionYear;
 
+    private final String directorName;
+
     public static MovieResponse of(Movie entity) {
         return new MovieResponse(
                 entity.getId(),
                 entity.getName(),
-                entity.getProductionYear()
+                entity.getProductionYear(),
+                entity.getDirector().getName()
         );
     }
 }

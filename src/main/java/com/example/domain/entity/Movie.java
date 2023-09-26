@@ -26,8 +26,16 @@ public class Movie {
     @Column(name = "created_at")
     private LocalDateTime createdAt= LocalDateTime.now();
 
-    public Movie(String name, Integer productionYear) {
-        this.name= name;
+    @OneToOne
+    @JoinColumn(name = "director_id")
+    private Director director;
+
+    public Movie(String name, int productionYear) {
+        this.name = name;
         this.productionYear = productionYear;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
