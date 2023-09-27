@@ -55,4 +55,12 @@ public class Movie {
     public void setName(String name) {
         this.name = name;
     }
+
+    public void setActors(List<Actor> actors) {
+        this.actors = actors;
+    }
+
+    public void setDirector(Director director) {
+        this.director = director;
+    }
 }
