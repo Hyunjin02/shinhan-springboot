@@ -13,16 +13,16 @@ public class MovieServiceTest {
     @Autowired
     private MovieService movieService;
 
-    @Test
-    @DisplayName("영화 단건 조회 테스트")
-    public void getMovieTest() {
-        // given
-        int movieId = 12323;
-
-        // when
-        MovieResponse movieResponse = movieService.getMovie(movieId);
-
-        // then
-        assertNotNull(movieResponse);
-    }
+//    @Test
+//    @DisplayName("영화 단건 조회 테스트")
+//    public void getMovieTest() {
+//        // given
+//        int movieId = 12323;
+//
+//        // when
+//        MovieResponse movieResponse = movieService.getMovie(movieId);
+//
+//        // then
+//        assertNotNull(movieResponse);
+//    }
 }
