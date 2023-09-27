@@ -1,5 +1,6 @@
 package com.example.domain.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -56,11 +57,11 @@ public class Movie {
         this.name = name;
     }
 
-    public void setActors(List<Actor> actors) {
-        this.actors = actors;
-    }
-
     public void setDirector(Director director) {
         this.director = director;
+    }
+
+    public void setActors(List<Actor> actors) {
+        this.actors = actors;
     }
 }
